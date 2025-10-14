@@ -1,9 +1,10 @@
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1" 
 from flask import Flask, render_template, request
 from config import Config
 from models import db
 from models.product import Product
 import numpy as np
-import os
 import pickle
 from sklearn.metrics.pairwise import cosine_similarity
 from hybrid_features import extract_hybrid_features
