@@ -1,5 +1,5 @@
 # Use official Python image
-FROM python:3.12-slim
+FROM python:3.11-slim
 
 # Install system dependencies for OpenCV
 RUN apt-get update && \
@@ -13,11 +13,11 @@ WORKDIR /app
 COPY . .
 
 # Upgrade pip and install Python dependencies
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
 # Expose port 8080 for Railway
 EXPOSE 8080
 
-# Run the app
-CMD ["gunicorn", "app:app", "-b", "0.0.0.0:8080"]
+# Run the app with 2 Gunicorn workers
+CMD ["gunicorn", "app:app", "-b", "0.0.0.0:8080", "--workers", "2"]
