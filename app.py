@@ -1,5 +1,4 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1" 
 from flask import Flask, render_template, request
 from config import Config
 from models import db

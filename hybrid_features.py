@@ -1,22 +1,14 @@
 import numpy as np
 import cv2
 import os
-_model = None
-
-def _get_vgg_model():
-    global _model
-    if _model is None:
-        from tensorflow.keras.applications.vgg16 import VGG16
-        _model = VGG16(weights='imagenet', include_top=False, pooling='avg')
-    return _model
+import tensorflow as tf
+from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input
+from tensorflow.keras.preprocessing import image
 
 model = VGG16(weights='imagenet', include_top=False, pooling='avg')
 
 def extract_cnn_features(img_path):
     try:
-        from tensorflow.keras.applications.vgg16 import preprocess_input
-        from tensorflow.keras.preprocessing import image
-        model = _get_vgg_model()
         img = image.load_img(img_path, target_size=(224, 224))
         img_array = image.img_to_array(img)
         expanded_img_array = np.expand_dims(img_array, axis=0)
