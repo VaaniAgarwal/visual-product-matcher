@@ -96,5 +96,7 @@ def match_image():
 
     return render_template('match_form.html')
 
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
