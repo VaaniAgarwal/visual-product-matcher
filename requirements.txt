@@ -6,5 +6,5 @@ opencv-python
 numpy
 scikit-learn
 tensorflow
-Pillow
-requestsz
+Pillow>=11.0.0
+requests
