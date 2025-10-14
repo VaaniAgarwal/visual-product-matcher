@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Visual Match{% endblock %}
+{% block extra_styles %}
+<style>
+  .match-form {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+  }
+  .match-form h2 {
+    text-align: center;
+    color: #1976d2;
+    margin-bottom: 25px;
+  }
+  .form-label {
+    font-weight: 500;
+  }
+  .btn-primary {
+    background-color: #1976d2;
+    border: none;
+  }
+  .btn-primary:hover {
+    background-color: #135ca2;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="match-form">
+  <h2>Find Similar Products 🔍</h2>
+  <form action="/match" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="image" class="form-label">Upload an Image</label>
+      <input class="form-control" type="file" name="image" accept="image/*">
+    </div>
+    <div class="text-center fw-semibold text-secondary mb-2">OR</div>
+    <div class="mb-3">
+      <label for="image_url" class="form-label">Enter Image URL</label>
+      <input class="form-control" type="text" name="image_url" placeholder="https://example.com/image.jpg">
+    </div>
+    <button type="submit" class="btn btn-primary w-100 mt-3">Search Similar Products</button>
+  </form>
+</div>
+{% endblock %}

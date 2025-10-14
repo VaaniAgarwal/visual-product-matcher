@@ -7,7 +7,7 @@ sample_products = [
     # ---- Clothing ----
     {"name": "Red T-Shirt", "category": "Clothing", "image_url": "static/images/red_tshirt.jpg", "embedding": []},
     {"name": "Blue Jeans", "category": "Clothing", "image_url": "static/images/blue_jeans.jpg", "embedding": []},
-    {"name": "White Shirt", "category": "Clothing", "image_url": "static/images/white_shirt.jpg", "embedding": []},
+    {"name": "Black Shirt", "category": "Clothing", "image_url": "static/images/black_shirt.jpg", "embedding": []},
     {"name": "Black Hoodie", "category": "Clothing", "image_url": "static/images/black_hoodie.jpeg", "embedding": []},
     {"name": "Yellow Summer Dress", "category": "Clothing", "image_url": "static/images/yellow_summer_dress.jpeg", "embedding": []},
     {"name": "Grey Sweater", "category": "Clothing", "image_url": "static/images/grey_sweater.jpeg", "embedding": []},

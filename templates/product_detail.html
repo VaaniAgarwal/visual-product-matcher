@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}{{ product.name }}{% endblock %}
+{% block extra_styles %}
+<style>
+    .product-image {
+        max-width: 100%;
+        height: 500px;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .details h1 {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    .details p {
+        font-size: 1rem;
+        color: #555;
+    }
+    .similar-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.2s ease;
+    }
+    .similar-item:hover img{
+        transform: scale(1.03);
+    }
+    .similar-item h6 {
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #333;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<a href="{{ url_for('home') }}" class="btn btn-outline-primary mb-4">← Back to Catalog</a>
+<div class="card shadow-sm p-4 mb-4">
+    <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-5 text-center">
+            <img src="{{ url_for('static', filename='images/' + product.image_url.split('/')[-1]) }}" alt="{{ product.name }}" class="product-image">
+        </div>
+        <div class="col-12 col-md-7 details">
+            <h1>{{ product.name }}</h1>
+            <p><strong>Category:</strong> {{ product.category }}</p>
+            <p class="mt-3 text-muted">This product belongs to our {{ product.category.lower() }} collection. Explore similar styles below!</p>
+        </div>
+    </div>
+</div>
+
+{% if similar_products %}
+<div class = "mt-5">
+    <h3 class="mb-3">Similar Products</h3>
+    <div class="row g-4">
+        {% for sp in similar_products %}
+        <div class="col-6 col-md-4 col-lg-3">
+            <a href="{{ url_for('product_detail', product_id=sp.id) }}" class="text-decoration-none similar-item">
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="{{ url_for('static', filename='images/' + sp.image_url.split('/')[-1]) }}" alt="{{ sp.name }}">
+                    <div class="card-body text-center">
+                        <h6>{{ sp.name }}</h6>
+                        <p class="text-muted small">{{ sp.category }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>    
+</div>
+{% endif %}
+{% endblock %}

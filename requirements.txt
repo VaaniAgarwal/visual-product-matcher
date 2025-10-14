@@ -1,0 +1,10 @@
+Flask
+gunicorn
+Flask-SQLAlchemy
+psycopg2-binary
+opencv-python
+numpy
+scikit-learn
+tensorflow
+Pillow
+requests
