@@ -56,6 +56,20 @@ The web interface, built with Flask and responsive HTML templates, provides an i
 
 ---
 
+## 📸 Screenshots
+
+| Home Page 🏠 | Upload Page 📤 |
+|---------------|----------------|
+| ![Home Page](static/screenshots/home.png) | ![Upload Page](static/screenshots/upload.png) |
+| _Displays the main product catalog with search and category filters._ | _User can upload an image or paste an image URL to find similar products._ |
+
+| Results Page 🔍 | Product Detail Page 🛍️ |
+|------------------|--------------------------|
+| ![Results Page](static/screenshots/results.png) | ![Product Detail Page](static/screenshots/product_detail.png) |
+| _Shows the top visually similar products with similarity scores and filtering slider._ | _Displays details of a selected product along with other similar items in the same category._ |
+
+---
+
 ## 🧩 Setup Instructions
 
 ### 1. Clone the repository
