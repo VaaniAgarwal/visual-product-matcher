@@ -6,8 +6,8 @@ A web-based application that allows users to find visually similar products usin
 
 ## 🚀 Live Demo
 
-**Working Application URL:** _Deployment in progress (Render Hosting)_
-(The project can be run locally using the instructions below.)
+**Working Application URL:** _Currently not deployed due to resource limitations (can run locally)_
+The project runs fully on local machines following the setup instructions below.
 
 ---
 
@@ -31,7 +31,9 @@ This project integrates machine learning–based feature extraction and similari
 
 When a user uploads an image or provides an image URL, the system extracts its feature vector and computes similarity scores with the stored catalog features. The top-matching items are displayed with similarity percentages and filtering options.
 
-The web interface, built with Flask and responsive HTML templates, provides an intuitive experience for browsing, searching, and visual matching. Product details are stored in a PostgreSQL database, and the system is designed for scalable deployment using Render or similar platforms.
+The web interface, built with Flask and responsive HTML templates, provides an intuitive experience for browsing, searching, and visual matching. Product details are stored in a PostgreSQL database.
+
+⚠️ Note: Due to model size, online deployment on free hosting platforms is not currently feasible.
 
 ---
 
@@ -41,7 +43,6 @@ The web interface, built with Flask and responsive HTML templates, provides an i
 - **Backend:** Python (Flask)
 - **Database:** PostgreSQL
 - **Machine Learning:** NumPy, scikit-learn, OpenCV, pickle
-- **Deployment (Planned):** Render (Free Hosting)
 
 ---
 
@@ -52,7 +53,6 @@ The web interface, built with Flask and responsive HTML templates, provides an i
 - Filter results by similarity score
 - Product catalog browsing with search and category filters
 - Mobile responsive and clean UI
-- Modular and scalable backend design
 
 ---
 
@@ -104,8 +104,8 @@ python app.py
 
 ## 🧾 Deliverables
 
-- Working Application URL: Render Deployment in Progress
 - GitHub Repository: [https://github.com/VaaniAgarwal/visual-product-matcher](https://github.com/VaaniAgarwal/visual-product-matcher)
+- Demo: Run locally as described above
 - Brief Write-up (Approach): Included in the README above (under 200 words)
 
 ---
