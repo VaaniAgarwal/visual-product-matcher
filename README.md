@@ -6,7 +6,7 @@ A web-based application that allows users to find visually similar products usin
 
 ## 🚀 Live Demo
 
-**Working Application URL:** _Deployment in progress (Render Hosting)_
+**Working Application URL:** _Deployment in progress (Render Hosting)_  
 (The project can be run locally using the instructions below.)
 
 ---
@@ -19,67 +19,79 @@ A web-based application that allows users to find visually similar products usin
 
 ## 💡 Project Overview
 
-Visual Product Matcher is a Flask-based web application that enables users to upload an image or enter an image URL to find visually similar items from an existing product catalog. It uses pre-extracted image features and similarity computation techniques to retrieve the most relevant matches efficiently.
+**Visual Product Matcher** is a Flask-based web application that enables users to upload an image or enter an image URL to find visually similar items from an existing product catalog.  
+It uses pre-extracted image features and similarity computation techniques to retrieve the most relevant matches efficiently.
 
 The system can be useful for e-commerce and visual search applications, helping users discover alternative products that look similar to a reference image.
 
 ---
 
-## 🧠 Approach 
+## 🧠 Approach
 
-This project integrates machine learning–based feature extraction and similarity search to match visually related products. Each catalog image is processed using a hybrid feature extraction model (combining color histograms and deep feature embeddings) to obtain numerical representations (feature vectors). These vectors are stored for efficient retrieval using cosine similarity.
+This project integrates **machine learning–based feature extraction** and **similarity search** to match visually related products.  
+Each catalog image is processed using a **hybrid feature extraction model** (combining color histograms and deep feature embeddings) to obtain numerical representations (feature vectors).  
+These vectors are stored for efficient retrieval using **cosine similarity**.
 
-When a user uploads an image or provides an image URL, the system extracts its feature vector and computes similarity scores with the stored catalog features. The top-matching items are displayed with similarity percentages and filtering options.
+When a user uploads an image or provides an image URL, the system extracts its feature vector and computes similarity scores with the stored catalog features.  
+The top-matching items are displayed with similarity percentages and filtering options.
 
-The web interface, built with Flask and responsive HTML templates, provides an intuitive experience for browsing, searching, and visual matching. Product details are stored in a PostgreSQL database, and the system is designed for scalable deployment using Render or similar platforms.
+The web interface, built with Flask and responsive HTML templates, provides an intuitive experience for browsing, searching, and visual matching.  
+Product details are stored in a **PostgreSQL** database, and the system is designed for **scalable deployment** using Render or similar platforms.
 
 ---
 
 ## ⚙️ Tech Stack
 
-- **Frontend:** HTML, CSS, Bootstrap
-- **Backend:** Python (Flask)
-- **Database:** PostgreSQL
-- **Machine Learning:** NumPy, scikit-learn, OpenCV, pickle
+- **Frontend:** HTML, CSS, Bootstrap  
+- **Backend:** Python (Flask)  
+- **Database:** PostgreSQL  
+- **Machine Learning:** NumPy, scikit-learn, OpenCV, pickle  
 - **Deployment (Planned):** Render (Free Hosting)
 
 ---
 
 ## 📸 Features
 
-- Upload or provide an image URL for product matching
-- Display top visually similar products
-- Filter results by similarity score
-- Product catalog browsing with search and category filters
-- Mobile responsive and clean UI
+- Upload or provide an image URL for product matching  
+- Display top visually similar products  
+- Filter results by similarity score  
+- Product catalog browsing with search and category filters  
+- Mobile-responsive and clean UI  
 - Modular and scalable backend design
 
 ---
 
 ## 🧩 Setup Instructions
 
-### 1. Clone the repository
+```bash
+# 1. Clone the repository
 git clone https://github.com/VaaniAgarwal/visual-product-matcher.git
-
 cd visual-product-matcher
 
-### 2. Create a virtual environment
+# 2. Create a virtual environment
 python -m venv venv
-(On Windows) venv\Scripts\activate
-(On Mac/Linux) source venv/bin/activate
 
-### 3. Install dependencies
+# Activate the virtual environment
+# On Windows:
+venv\Scripts\activate
+# On Mac/Linux:
+source venv/bin/activate
+
+# 3. Install dependencies
 pip install -r requirements.txt
 
-### 4. Configure the database
-You can use the default local PostgreSQL connection or set your own in config.py:
-SQLALCHEMY_DATABASE_URI = "postgresql://username:password@localhost:5432/visual_matcher_db"
+# 4. Configure the database
+# Edit config.py if needed:
+# Example:
+# SQLALCHEMY_DATABASE_URI = "postgresql://username:password@localhost:5432/visual_matcher_db"
 
-### 5. Run the application
+# 5. Run the application
 python app.py
 
-### 6. Open in browser
-[http://127.0.0.1:5000](http://127.0.0.1:5000)
+# 6. Open in your browser
+# Visit the following URL:
+# http://127.0.0.1:5000
+
 
 ---
 
