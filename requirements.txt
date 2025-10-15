@@ -4,7 +4,7 @@ Flask-SQLAlchemy
 psycopg2-binary
 opencv-python
 numpy
-tensorflow-cpu==2.11.0
+tensorflow-cpu==2.20.0
 scikit-learn
 Pillow>=11.0.0
 requests
